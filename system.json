@@ -70,7 +70,7 @@
   "primaryTokenAttribute": "harm",
   "url": "https://github.com/pyrotraxus/Kult_DL",
   "manifest": "https://gitlab.com/fattom23/kult4e-foundry/-/raw/master/system.json",
-  "download": "https://gitlab.com/fattom23/kult4e-foundry/-/raw/master/kult4e-foundry-master.zip",
+  "download": "https://github.com/pyrotraxus/Kult_DL/archive/refs/heads/main.zip",
   "license": "LICENSE.txt",
   "media": [
     {
