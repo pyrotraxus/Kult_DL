@@ -417,7 +417,7 @@ div.right-middle-column{
 } */
 
 .personal[type=text]:hover{
-  box-shadow: 0 0 5pt 0pt red;
+  box-shadow: 0 0 0pt 0pt red;
 }
 .personal[type=text]:focus {
   box-shadow: 0 0 5pt 0pt red;
