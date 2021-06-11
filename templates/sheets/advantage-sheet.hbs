@@ -1,0 +1,36 @@
+<form class="{{cssClass}}" autocomplete="off">
+    <header class="sheet-header">
+        <img src="{{item.img}}" data-edit="img" title="{{item.name}}" height="64" width="64"/>
+        <h1><input name="name" type="text" value="{{item.name}}" placeholder="Name"/></h1>
+    </header>
+    <div>
+        <table>
+        <tr><td>Attribute:</td><td><select name="data.attributemod" value= "{{data.attributemod}}">
+        <option selected="selected" value="{{data.attributemod}}">{{data.attributemod}}</option>
+        <option value="">-none-</option>
+        <option value="willpower">Willpower</option>
+        <option value="fortitude">Fortitude</option>
+        <option value="reflexes">Reflexes</option>
+        <option value="reason">Reason</option>
+        <option value="intuition">Intuition</option>
+        <option value="perception">Perception</option>
+        <option value="coolness">Coolness</option>
+        <option value="violence">Violence</option>
+        <option value="charisma">Charisma</option>
+        <option value="soul">Soul</option>
+
+        </select>
+        </td>
+        <td>Edge: <input name="data.tokens" value= "{{data.tokens}}" class="short-input" type="number" /></td>
+
+        </tr>
+            <tr><td>Type:</td><td><select name="data.type" value= "{{data.type}}"><option selected="selected" value="{{data.type}}">{{data.type}}</option><option value="active">Active</option><option value="passive">Passive</option></td>
+                <tr><td>Effect:</td><td><textarea name="data.effect" placeholder = "Effect">{{data.effect}}</textarea></td></tr>
+                <tr class="editor-row"><td>15+:</td><td>{{editor content=data.completesuccess target="data.completesuccess" button=true owner=owner editable=editable}}</td></tr>
+    <tr class="editor-row"><td>10-14:</td><td>{{editor content=data.partialsuccess target="data.partialsuccess" button=true owner=owner editable=editable}}</td></tr>
+    <tr class="editor-row"><td>0-9</td><td>{{editor content=data.failure target="data.failure" button=true owner=owner editable=editable}}</td></tr>
+
+        </table>
+        <select name="data.specialflag" value="{{data.specialflag}}"{{#select data.specialflag}}><option value='5'>Advantage</option>{{/select}}</select>
+           </div>
+</form>

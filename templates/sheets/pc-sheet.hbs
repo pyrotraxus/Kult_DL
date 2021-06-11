@@ -1,0 +1,159 @@
+<form class="{{cssClass}} kult-sheet" autocomplete="off">
+
+{{!-- Sheet Header --}}
+
+<header class="sheet-header"><script src="systems/kult4e/scripts/delete.js"></script><script src="systems/kult4e/scripts/getAttribute.js"></script>
+</header>
+
+<div class="top-section">
+   <div class="modifier-section", style="margin-bottom:-30px;">
+        <h2 class="blackbox", style="max-width: 100px;"><span style="font-size: 9px; vertical-align: 4px; display: inline;">&#9830;</span> <span>Name</span></h2>
+        <span class="character-name", style="width: 409px; font-size: 20px; border-bottom: 1px solid; border-right: 1px solid; padding-bottom:0px;">
+          <input class="novo" style="font-family: 'Ubuntu';font-size: 18px;" name="name" type="text" value="{{actor.name}}" placeholder="Name"/></span>
+   </div>
+   <div class="modifier-section", style="margin-bottom:-30px;">
+         <h2 class="blackbox", style="max-width: 160px;"><span style="font-size: 9px; vertical-align: 4px;">&#9830;</span> <span>Archetype</span></h2>
+         <span class="character-name", style="width: 372px; font-size: 20px; border-bottom: 1px solid; border-right: 1px solid;">
+           <input class="novo" style="font-family: 'Ubuntu';font-size: 18px;" name="data.archetype" type="text" value="{{data.archetype}}" placeholder="Archetype"/></span>
+               <img class="logo-picture" src="/systems/kult4e/assets/Kult-Divinity-lost-logo-1-webb.png" style="margin-top:10px;display: block; margin-left: auto; margin-right: auto; max-width:250px; max-height:150px; width: auto; height: auto;"/>
+   </div>
+   <div class="modifier-section", style="margin-top:0px;">
+        <h2 class="blackbox", style="max-width: 160px;"><span style="font-size: 9px; vertical-align: 4px;">&#9830;</span> <span>Occupation</span></h2>
+        <span class="character-name", style="width: 360px; font-size: 20px; border-bottom: 1px solid; border-right: 1px solid;">
+          <input class="novo" style="font-family: 'Ubuntu';font-size: 18px;" name="data.occupation" type="text" value="{{data.occupation}}" placeholder="Occupation"/></span>
+   </div>
+   </div>
+
+<div class="flex-container top-section">
+    <div class="vertical-align", style="margin-top:3px;">
+         <h2 class="blackbox", style="max-width: 150px;"><span style="font-size: 9px; vertical-align: 4px;">&#9830;</span> <span>Appearance</span></h2>
+         <span class="character-name", style="width: 360px; font-size: 20px;">
+           <textarea class="personal" rows="5" cols="1" name="data.appearance" type="text" placeholder="Describe the distinguishing traits of your character" style="width:510px; resize:none; border-top: 0px solid; background-color: white">{{data.appearance}}</textarea></span>
+    </div>
+<img style="display: block; margin-left: auto; margin-right: auto; max-width:200px; max-height:150px; width: auto; height: auto;" class="actor-picture" src="{{actor.img}}" data-edit="img" title="{{actor.name}}" width="200px"/>
+</div>
+
+
+<div class="top-section">
+     <div class="row">
+  <div class="column1">
+    <h2 class="blackbox", style="max-width: 120px;"><span style="font-size: 9px; vertical-align: 4px;">&#9830;</span> <span>Attribute</span></h2>
+    <div class="attribute-column">
+      <table class="attribute-box", Style="background-color: white; border-top: none; border-bottom: none; width:100%; font-family: 'Ubuntu'; font-size: 14px">
+      <tr style="background-color: #f2f1ef"><td>{{localize 'kult4e.Willpower'}}:</td><td colspan=75%></td><td><select name="data.attributes.willpower" style="background: #fff; color:#1e1e1c" value= "{{data.attributes.willpower}}">{{#select data.attributes.willpower}}<option value="3">3</option><option value="2">2</option><option value="1">1</option><option value="0">0</option><option value="-1">-1</option><option value="-2">-2</option><option value="-3">-3</option>{{/select}}</select></td></tr>
+      <tr><td>{{localize 'kult4e.Fortitude'}}:</td><td colspan=75%>&nbsp;</td><td><select name="data.attributes.fortitude" style="background: #fff; color:#1e1e1c" value= "{{data.attributes.fortitude}}">{{#select data.attributes.fortitude}}<option value="3">3</option><option value="2">2</option><option value="1">1</option><option value="0">0</option><option value="-1">-1</option><option value="-2">-2</option><option value="-3">-3</option>{{/select}}</select></td></tr>
+      <tr style="background-color: #f2f1ef"><td>{{localize 'kult4e.Reflexes'}}:</td><td colspan=75%>&nbsp;</td><td><select name="data.attributes.reflexes" style="background: #fff; color:#1e1e1c" value= "{{data.attributes.reflexes}}">{{#select data.attributes.reflexes}}<option value="3">3</option><option value="2">2</option><option value="1">1</option><option value="0">0</option><option value="-1">-1</option><option value="-2">-2</option><option value="-3">-3</option>{{/select}}</select></td></tr>
+      <tr><td>{{localize 'kult4e.Reason'}}:</td><td colspan=75%>&nbsp;</td><td><select name="data.attributes.reason" style="background: #fff; color:#1e1e1c" value= "{{data.attributes.reason}}">{{#select data.attributes.reason}}<option value="3">3</option><option value="2">2</option><option value="1">1</option><option value="0">0</option><option value="-1">-1</option><option value="-2">-2</option><option value="-3">-3</option>{{/select}}</select></td></tr>
+      <tr style="background-color: #f2f1ef"><td>{{localize 'kult4e.Intuition'}}:</td><td colspan=75%>&nbsp;</td><td><select name="data.attributes.intuition" style="background: #fff; color:#1e1e1c" value= "{{data.attributes.intuition}}">{{#select data.attributes.intuition}}<option value="3">3</option><option value="2">2</option><option value="1">1</option><option value="0">0</option><option value="-1">-1</option><option value="-2">-2</option><option value="-3">-3</option>{{/select}}</select></td></tr>
+      <tr><td>{{localize 'kult4e.Perception'}}:</td><td colspan=75%&nbsp;</td><td><select name="data.attributes.perception" style="background: #fff; color:#1e1e1c" value= "{{data.attributes.perception}}">{{#select data.attributes.perception}}<option value="3">3</option><option value="2">2</option><option value="1">1</option><option value="0">0</option><option value="-1">-1</option><option value="-2">-2</option><option value="-3">-3</option>{{/select}}</select></td></tr>
+      <tr style="background-color: #f2f1ef"><td>{{localize 'kult4e.Coolness'}}:</td><td colspan=75%>&nbsp;</td><td><select name="data.attributes.coolness" style="background: #fff; color:#1e1e1c" value= "{{data.attributes.coolness}}">{{#select data.attributes.coolness}}<option value="3">3</option><option value="2">2</option><option value="1">1</option><option value="0">0</option><option value="-1">-1</option><option value="-2">-2</option><option value="-3">-3</option>{{/select}}</select></td></tr>
+      <tr><td>{{localize 'kult4e.Violence'}}:</td><td colspan=75%>&nbsp;</td><td><select name="data.attributes.violence" style="background: #fff; color:#1e1e1c" value= "{{data.attributes.violence}}">{{#select data.attributes.violence}}<option value="3">3</option><option value="2">2</option><option value="1">1</option><option value="0">0</option><option value="-1">-1</option><option value="-2">-2</option><option value="-3">-3</option>{{/select}}</select></td></tr>
+      <tr style="background-color: #f2f1ef"><td>{{localize 'kult4e.Charisma'}}:</td><td colspan=75%>&nbsp;</td><td><select name="data.attributes.charisma" style="background: #fff; color:#1e1e1c" value= "{{data.attributes.charisma}}">{{#select data.attributes.charisma}}<option value="3">3</option><option value="2">2</option><option value="1">1</option><option value="0">0</option><option value="-1">-1</option><option value="-2">-2</option><option value="-3">-3</option>{{/select}}</select></td></tr>
+      <tr><td>{{localize 'kult4e.Soul'}}:</td><td colspan=75%>&nbsp;</td><td><select name="data.attributes.soul" style="background: #fff; color:#1e1e1c" value= "{{data.attributes.soul}}">{{#select data.attributes.soul}}<option value="3">3</option><option value="2">2</option><option value="1">1</option><option value="0">0</option><option value="-1">-1</option><option value="-2">-2</option><option value="-3">-3</option>{{/select}}</select></td></tr>
+      </table>
+    </div>
+  </div>
+  <div class="column2">
+    <h2 class="blackbox", style="max-width: 100px;"><span style="font-size: 9px; vertical-align: 4px;">&#9830;</span> <span>Moves</span></h2>
+    <div class="item-list move-list", style="; font-family: 'Ubuntu'; font-size: 14px">
+            {{#each moves as |move id|}}
+            {{#if (eq move.type "move")}}
+            {{> "systems/kult4e/templates/partials/move-card.hbs" move}}
+            {{/if}}
+            {{/each}}
+    </div>
+  </div>
+  <div class="column3">
+    <h2 class="blackbox", style="max-width: 115px;"><span style="font-size: 9px; vertical-align: 4px;">&#9830;</span> <span>Modifier</span></h2>
+    <div class="vertical-align">
+        <div style="font-family: 'Ubuntu'; font-size: 14px">Bonus/Penalty: &ensp;<select name="data.sitmod" style="background: #fff; color:#1e1e1c" value= "{{data.sitmod}}"> {{#select data.sitmod}} <option value="3">3</option><option value="2">2</option><option value="1">1</option><option value="0">0</option><option value="-1">-1</option>
+          <option value="-2">-2</option><option value="-3">-3</option><option value="-4">-4</option><option value="-5">-5</option>{{/select}}</select></div>
+    </div>
+    <h2 class="blackbox", style="max-width: 115px; margin-top:18px;"><span style="font-size: 9px; vertical-align: 4px;">&#9830;</span> <span>Wounds</span></h2>
+    <div class="wound-entries">
+        {{#each wounds}}
+        <div class="wound-section",  style="font-family: 'Ubuntu'; font-size: 13px"><label>Major Wound</label>&ensp;&ensp;
+        <select class="stabilized" style="font-family: 'Ubuntu'; font-size: 12px; background: #fff; color:#1e1e1c" name="data.attributes.woundstabilized.{{this}}" value= "{{lookup ../data.attributes.woundstabilized this}}">{{#select (lookup ../data.attributes.woundstabilized this)}}<option value="true">Stabilized</option><option value="false">Not Stabilized</option>{{/select}}</select>
+        </div>
+        <div class="wound-name"><input type="text" style="background-color: #fff; font-family: 'Ubuntu'; font-size: 12px; max-width: 203px" name="data.attributes.woundtext.{{this}}" value="{{lookup ../data.attributes.woundtext this}}"></div>
+
+        {{/each}}
+
+        <div class="wound-section",  style="font-family: 'Ubuntu'; font-size: 13px"><label>Critical Wound</label>&ensp;<select style="font-family: 'Ubuntu'; font-size: 12px;  background: #fff; color:#1e1e1c" width="100" style="width: 100px" name="data.attributes.criticalwoundstabilized" value= "{{data.attributes.criticalwoundstabilized}}">{{#select data.attributes.criticalwoundstabilized}}<option value="true">Stabilized</option><option value="false">Not Stabilized</option>{{/select}}</select></div>
+        <div class="wound-name"><input type="text" style="background-color: #fff; font-family: 'Ubuntu'; font-size: 12px; max-width: 203px" name="data.attributes.criticalwound" value="{{data.attributes.criticalwound}}"></div>
+     </div>
+
+  </div>
+</div>
+</div>
+
+<div class="top-section", display="block", style="margin-top:0px;">
+  <div class="row">
+<div class="column4">
+ <h2 class="blackbox", style="max-width: 150px"><span style="font-size: 9px; vertical-align: 4px;">&#9830;</span> <span>Dark Secrets</span></h2>
+ <div class=" item-list darksecret-list">
+     {{#each darksecrets as |darksecret id|}}
+     {{> "systems/kult4e/templates/partials/darksecret-card.hbs" darksecret}}
+     {{/each}}
+ </div>
+
+ <h2 class="blackbox", style="max-width: 170px; margin-top:18px;"><span style="font-size: 9px; vertical-align: 4px;">&#9830;</span> <span>Disadvantages</span></h2>
+ <div class="item-list disadvantage-list">
+     {{#each disadvantages as |disadvantage id|}}
+     {{> "systems/kult4e/templates/partials/disadvantage-card.hbs" disadvantage}}
+     {{/each}}
+
+ </div>
+ <h2 class="blackbox", style="max-width: 145px; margin-top:18px;"><span style="font-size: 9px; vertical-align: 4px;">&#9830;</span> <span>Advantages</span></h2>
+ <div class="item-list advantage-list">
+     {{#each advantages as |advantage id|}}
+     {{> "systems/kult4e/templates/partials/advantage-card.hbs" advantage}}
+     {{/each}}
+ </div>
+ <h2 class="blackbox", style="max-width: 117px; margin-top:18px;"><span style="font-size: 9px; vertical-align: 4px;">&#9830;</span> <span>Weapon</span></h2>
+ <div class=" item-list weapon-list">
+ {{#each weapons as |weapon id|}}
+ {{> "systems/kult4e/templates/partials/weapon-card.hbs" weapon}}
+ {{/each}}
+ </div>
+</div>
+
+<div class="column4">
+ <h2 class="blackbox", style="max-width: 115px;"><span style="font-size: 9px; vertical-align: 4px;">&#9830;</span> <span>Stability</span></h2>
+ <select style="font-family: 'Ubuntu'; font-size: 13px;  background: #fff; color:#1e1e1c" name="data.stability.value" value= "{{data.stability.value}}">{{#select data.stability.value}}
+     <option value="0">Composed: No Modifiers</option>
+     <option value="1">Uneasy: -1 to Disadvantage</option>
+     <option value="2">Unfocused: -1 to Disadvantage</option>
+     <option value="3">Shaken: -1 KIT/-2 Disadvantage</option>
+     <option value="4">Distressed: -1 KIT/-2 Disadvantage</option>
+     <option value="5">Neurotic: -1 KIT/-2 Disadvantage</option>
+     <option value="6">Anxious: -2 KIT/ -3 Disadvantage / +1 Illusion</option>
+     <option value="7">Irrational: -2 KIT/ -3 Disadvantage / +1 Illusion</option>
+     <option value="8">Unhinged: -2 KIT/ -3 Disadvantage / +1 Illusion</option>
+     <option value="9">Broken: GM Makes a Move</option>{{/select}}</select>
+ <a class="stability-minus" title="Click to Take Stability Damage"><i class="fas fa-minus-circle"></i></a><a class="stability-plus" title="Click to Heal Stability"><i class="fas fa-plus-circle"></i></a>
+ <h2 class="blackbox", style="max-width: 125px; margin-top:18px;"><span style="font-size: 9px; vertical-align: 4px;">&#9830;</span> <span>Relations</span></h2>
+ <div class="item-list relationship-list">
+     {{#each relationships as |relationship id|}}
+     {{> "systems/kult4e/templates/partials/relationship-card.hbs" relationship}}
+     {{/each}}
+
+ </div>
+ <h2 class="blackbox", style="max-width: 185px; margin-top:18px;"><span style="font-size: 9px; vertical-align: 4px;">&#9830;</span> <span>Dramatic Hooks</span></h2>
+ <div class="item-list relationship-list">
+     {{#each dramahook as |dramahook id|}}
+     {{> "systems/kult4e/templates/partials/dramahook-card.hbs" dramahook}}
+     {{/each}}
+
+ </div>
+
+ <h2 class="blackbox", style="max-width: 85px; margin-top:18px;"><span style="font-size: 9px; vertical-align: 4px;">&#9830;</span> <span>Gear</span></h2>
+ <div class=" item-list weapon-list">
+ {{#each gear as |gear id|}}
+ {{> "systems/kult4e/templates/partials/gear-card.hbs" gear}}
+ {{/each}}
+</div>
+</div>
+</div>
+</div>
+</form>

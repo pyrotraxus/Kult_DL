@@ -1,0 +1,15 @@
+<form class="{{cssClass}}" autocomplete="off">
+    <header class="sheet-header">
+        <img src="{{item.img}}" data-edit="img" title="{{item.name}}" height="64" width="64"/>
+        <h1><input name="name" type="text" value="{{item.name}}" placeholder="Name"/></h1>
+    </header>
+    <div>
+        <table>
+        
+            <tr><td>Target:</td><td><input name="data.target" type="text" value= "{{data.target}}"></td>
+                <td>Strength:</td><td><input name="data.strength" type="text" value = "{{data.strength}}" data-dtype="Number"></td></tr>
+            
+        </table>
+        
+           </div>
+</form>

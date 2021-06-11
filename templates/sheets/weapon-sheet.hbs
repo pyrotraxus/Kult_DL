@@ -1,0 +1,25 @@
+<form class="{{cssClass}}" autocomplete="off">
+    <header class="sheet-header">
+        <img src="{{item.img}}" data-edit="img" title="{{item.name}}" height="64" width="64"/>
+        <h1><input name="name" type="text" value="{{item.name}}" placeholder="Name"/></h1>
+    </header>
+    <div class="weapon-box">
+        <table>
+        
+                       <tr>
+                <td>Harm Value:</td>
+                <td><input name="data.harm" class="short-input" type="text" value="{{data.harm}}" data-dtype="Number"></td>
+                <td>Range:</td>
+                <td><input name="data.range" type="text" style="width: 80px" value="{{data.range}}"></td>
+            </tr>
+            <tr>
+                <td>Ammo:</td>
+                <td><input class="short-input" name="data.ammo.value" type="text" value="{{data.ammo.value}}">/<input class="short-input" name="data.ammo.max" type="text" value="{{data.ammo.max}}">
+                </td>
+            </tr>
+            <tr class="editor-row"><td>Special</td><td>{{editor content=data.special target="data.special" button=true owner=owner editable=editable}}</td></tr>
+
+        </table>
+        
+           </div>
+</form>

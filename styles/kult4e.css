@@ -1,0 +1,518 @@
+.attribute-box {
+width: 20%;
+}
+
+.advantage-box{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    padding: 5px;
+    align-items: top;
+}
+
+.advantage-box div{
+    width: 100%;
+}
+
+.right-middle-column{
+    width: 40%
+}
+
+.attribute-box input{
+width: 40px;
+float: right;
+}
+
+.navigation-section{
+    border-top: 1px solid #1e1e1c;
+    border-bottom: 1px solid #1e1e1c;
+    vertical-align: middle;
+    padding-top: 2px;
+}
+
+
+
+.tabButton:hover{
+    background-color: ;
+    color: #e14c4b;
+    text-shadow: 0 0 0px red;
+}
+
+.tabButton{
+    background-color: #1e1e1c;
+    color: #fff;
+    font-size: xx-large;
+    padding-left: 25px;
+    padding-right: 25px;
+    margin-right: 5px;
+    margin-left: 5px;
+    vertical-align: middle;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+}
+
+.move-info input{
+    width: 30px;
+   }
+
+.move-info a{
+    vertical-align: middle
+}
+
+table{
+    border-top: ;
+}
+
+
+.section-label{
+    font-size: large;
+    font-weight: bold;
+}
+
+.item-list{
+    padding-bottom: 10px;
+}
+
+.move-card{
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 1px;
+    padding-bottom: 1px;
+    border-radius: 5px;
+    border: 1px solid #fff;
+    background-color: #fff;
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-bottom: 5px;
+    break-inside: avoid;
+    color: black;
+}
+
+.actor-picture{
+    float: right;
+    border: 1px solid #1e1e1c;
+}
+
+.logo-picture{
+    border: 0px solid #1e1e1c;
+}
+
+.bottom-section .move-list{
+    column-count: 2;}
+
+.bottom-section{
+    border-bottom: 1px solid #1e1e1c;
+}
+
+.item-control {
+    float: right;
+}
+
+.fas{
+    margin-left: 3px;
+    margin-right: 3px;
+    vertical-align: middle;
+}
+
+.middle-section{
+    display: flex;
+    align-items: top;
+    border-top: none;
+}
+
+input{
+    background-color: ;
+}
+
+.weapon-column{
+    display: inline-block;
+    width: 25%;
+}
+
+div.stability-section{
+    width: 50%;
+    position: relative;
+    left: 0px;
+    float: left;
+    overflow: hidden;
+}
+
+div.right-middle-column{
+    width: 50%;
+    overflow: hidden;
+    padding: 20px;
+}
+
+.flex-container{
+    display: flex
+}
+
+.flex-column {
+    flex:1
+}
+
+.top-section{
+    padding: 2px;
+    align-items: center;
+}
+
+.section-label{
+    text-align: center;
+    font-size: x-large;
+}
+
+.move-name{
+    background-color: ;
+    color: #1e1e1c;
+    text-align: center;
+    margin-top: 3px;
+    font-size: large
+}
+
+.result-roll{
+    background-color: ;
+    color: black;
+    text-align: center;
+    margin-top: 3px;
+    font-size: large
+}
+
+.tooltip {
+    position: relative;
+    display: inline-block;
+  }
+  /* Tooltip text */
+  .tooltip .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 6px;
+
+    /* Position the tooltip text - see examples below! */
+    position: absolute;
+    z-index: 1;
+  }
+
+  /* Show the tooltip text when you mouse over the tooltip container */
+  .tooltip:hover .tooltiptext {
+    visibility: visible;
+  }
+
+  .stabilized {
+    float: right;
+  }
+
+  td textarea{
+      width: 300px;
+      height: 150px
+  }
+
+  .hidden{
+      display: none;
+  }
+
+
+ .tox-tinymce
+  {
+      height: 100px;
+      min-height: 100px;
+  }
+
+  .background-box{
+      height: 100%;
+  }
+
+  .move-card-text{
+      padding-left: 3px;
+      vertical-align: middle;
+  }
+
+  .move-card img{
+      vertical-align: middle;
+      height: 15px;
+      width: 15px
+  }
+
+  .kult-sheet{
+      background-color: white;
+      padding: 5px;
+      color: #1e1e1c
+  }
+
+  .sheet-header img{
+      background-color: ;
+  }
+
+    /* Section Colors */
+  .section-label{
+    color: #1e1e1c;
+
+  }
+
+  .wound-section select{
+      background-color: ;
+  }
+
+  .wound-section input{
+      background-color: ;
+      width: 100%;
+  }
+
+  .stability-section .fas{
+      color: #1e1e1c;
+  }
+
+  .stability-section select{
+      background-color: ;
+  }
+
+.editor{
+    height: 100%;
+    min-height: 100px;
+}
+
+.editor-content{
+    height: 100%;
+    min-height: 100px;
+}
+
+.free-text{
+    height: 100%;
+    background-color: ;
+}
+
+  .modifier-section{
+      color: #1e1e1c;
+  }
+
+  .modifier-section select{
+      background-color: ;
+  }
+
+  input{
+      background-color: ;
+  }
+
+  .attribute-box tr{
+      background-color: ;
+      color: #1e1e1c;
+        }
+
+  .attribute-box option{
+      background-color: ;
+  }
+
+  .modifier-section{
+      display: flex;
+      align-items: center;
+  }
+
+  .wound-entries div{
+      display: flex;
+      align-items: center;
+      margin-bottom: 3px;
+  }
+
+  .wound-section{
+      display: flex;
+  }
+
+  .wound-section input{
+      color: ;
+  }
+
+  .two-column{
+      display: flex;
+      flex-direction: row;
+  }
+
+  .two-column>div{
+      width: 50%;
+      margin-right: 5px;
+  }
+
+  .weapon-card{
+      width: 100%
+  }
+
+  .two-column .section-label{
+      text-align: center;
+  }
+
+  .wound-name{
+      background-color: ;
+  }
+
+  .attribute-box select{
+      color: #1e1e1c;
+  }
+
+  .stabilized{
+      float: right;
+  }
+
+  .character-name input{
+    color: #1e1e1c;
+    border: 0px solid #1e1e1c;
+    background-color: white;
+  }
+
+  .background-section{
+      display: none;
+  }
+
+  input.short-input{
+      width: 70px;
+  }
+
+  .advantage-column{
+      text-align: center;
+      display: inline-block;
+  }
+
+  @font-face {
+      font-family: 'alverataw06-irregularpemdRg';
+      src: url('../fonts/alveratairregular-m-webfont.woff2') format('woff2');
+      font-weight: normal;
+      font-style: normal;
+  }
+
+  @font-face {
+    font-family: 'SokolW00';
+    src: url('../fonts/SokolW00-Regular.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Ubuntu';
+    src: url('../fonts/Ubuntu-Medium.woff2') format('woff2');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+.blackbox {
+      font-family: 'alverataw06-irregularpemdRg';
+      background-color: #1e1e1c;
+      color: #fff;
+      font-size: 18px;
+      padding-left: 15px;
+      padding-right: 15px;
+      margin-right: 5px;
+      margin-left: 5px;
+      vertical-align: middle;
+      border-top-left-radius: 4px;
+      border-top-right-radius: 4px;
+  }
+
+/* input.personal {
+  font-family: 'Ubuntu';
+  color: #1e1e1c;
+  font-size: 18px;
+} */
+
+.personal[type=text]:hover{
+  box-shadow: 0 0 5pt 0pt red;
+}
+.personal[type=text]:focus {
+  box-shadow: 0 0 5pt 0pt red;
+  outline-width: 0px;
+}
+
+.personal {
+  font-family: 'Ubuntu';
+  color: #1e1e1c;
+  font-size: 18px;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.column1 {
+  float: left;
+  width: 25%;
+  padding: 10px;
+  max-height: 420px; /* Should be removed. Only for demonstration */
+}
+.column2 {
+  float: left;
+  width: 45%;
+  padding: 10px;
+  max-height: 420px; /* Should be removed. Only for demonstration */
+}
+
+.column3 {
+  float: left;
+  width: 30%;
+  padding: 10px;
+  max-height: 420px; /* Should be removed. Only for demonstration */
+}
+
+.column4 {
+  float: left;
+  width: 50%;
+  padding: 10px;
+  height: 300px; /* Should be removed. Only for demonstration */
+}
+
+input.novo::-webkit-input-placeholder,
+textarea.personal::-webkit-input-placeholder {
+  color: #d7d7d5;
+}
+input.novo:-moz-placeholder,
+textarea.personal:-moz-placeholder {
+  color: #d7d7d5;
+}
+input.novo::-moz-placeholder,
+textarea.personal::-moz-placeholder {
+  color: #d7d7d5;
+}
+input.novo:-ms-input-placeholder,
+textarea.personal:-ms-input-placeholder {
+  color: #d7d7d5;
+}
+
+/* select{
+    background: #fff;
+    color:#1e1e1c;
+}
+
+select option {
+  background: #fff;
+  color:#1e1e1c;
+} */
+/*  a:hover,
+  .tabs .item.active,
+  .dnd5e.chat-card .card-header h3:hover,
+  .filepicker .directory > li:hover {
+  	color: #220A29;
+  	text-shadow: 0 0 8px #fff;
+  }*/
+
+    /*a:hover,
+    .tabs .item.active,
+    .dnd5e.chat-card .card-header {
+    	color: red;
+      text-shadow: 0 0 0px #1e1e1c;
+    } esse ta bom*/
+
+    /*#chat-log .message  {
+      background-color: #999111;
+      border: 3px solid #111999;
+    }*/
+
+    /*.sidebar-tab .directory-list .directory-item h3,
+    .sidebar-tab .directory-list .directory-item h4,
+    li.folder.collapsed > .folder-header h3,
+    .window-app.sidebar-popout .sidebar-tab .directory-list .directory-item h4 {
+      color: red;
+      text-shadow: 0 0 0px #1e1e1c;
+    }*/

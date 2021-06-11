@@ -1,0 +1,22 @@
+<form class="{{cssClass}}" autocomplete="off">
+    <header class="sheet-header">
+        <img src="{{item.img}}" data-edit="img" title="{{item.name}}" height="64" width="64"/>
+        <h1><input name="name" type="text" value="{{item.name}}" placeholder="Name"/></h1>
+    </header>
+    <div class="weapon-box">
+        <table>
+        
+                <tr>
+                <td>Uses:</td>
+                <td>
+                    <input name="data.ammo.value" type="text" value="{{data.ammo.value}}">/<input name="data.ammo.max" type="number" value="{{data.ammo.max}}">
+                </td>
+            </tr>
+            <tr>
+                <td>Description:</td>
+                <td><div class="free-text">{{editor content=data.description target="data.description" button=true owner=owner editable=editable}}</div></td></tr>
+
+        </table>
+        
+           </div>
+</form>
