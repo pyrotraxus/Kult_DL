@@ -69,7 +69,7 @@
   "gridUnits": "ft",
   "primaryTokenAttribute": "harm",
   "url": "https://github.com/pyrotraxus/Kult_DL",
-  "manifest": "",
+  "manifest": "https://raw.githubusercontent.com/pyrotraxus/Kult_DL/main/system.json",
   "download": "https://github.com/pyrotraxus/Kult_DL/archive/refs/heads/main.zip",
   "license": "LICENSE.txt",
   "media": [
