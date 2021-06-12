@@ -4,7 +4,7 @@
   "description": "An implementation of the Kult 4th Edition ruleset. Detailed_Version.",
   "version": 0.8,
   "minimumCoreVersion": "0.6.6",
-  "compatibleCoreVersion": "0.8.6",
+  "compatibleCoreVersion": "0.7.10",
   "templateVersion": 3,
   "author": "Tom LaPorta & Pyrotraxus",
   "esmodules": ["kult4e.js"],
