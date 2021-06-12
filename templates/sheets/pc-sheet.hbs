@@ -5,6 +5,8 @@
 <header class="sheet-header"><script src="systems/kult4e/scripts/delete.js"></script><script src="systems/kult4e/scripts/getAttribute.js"></script>
 </header>
 
+<div>
+
 <div class="top-section">
    <div class="modifier-section", style="margin-bottom:-30px;">
         <h2 class="blackbox", style="max-width: 100px;"><span style="font-size: 9px; vertical-align: 4px; display: inline;">&#9830;</span> <span>Name</span></h2>
@@ -37,7 +39,7 @@
 <div class="top-section">
      <div class="row">
   <div class="column1">
-    <h2 class="blackbox", style="max-width: 120px;"><span style="font-size: 9px; vertical-align: 4px;">&#9830;</span> <span>Attribute</span></h2>
+    <h2 class="blackbox", style="max-width: 130px;"><span style="font-size: 9px; vertical-align: 4px;">&#9830;</span> <span>Attributes</span></h2>
     <div class="attribute-column">
       <table class="attribute-box", Style="background-color: white; border-top: none; border-bottom: none; width:100%; font-family: 'Ubuntu'; font-size: 14px">
       <tr style="background-color: #f2f1ef"><td>{{localize 'kult4e.Willpower'}}:</td><td colspan=75%></td><td><select name="data.attributes.willpower" style="background: #fff; color:#1e1e1c" value= "{{data.attributes.willpower}}">{{#select data.attributes.willpower}}<option value="3">3</option><option value="2">2</option><option value="1">1</option><option value="0">0</option><option value="-1">-1</option><option value="-2">-2</option><option value="-3">-3</option>{{/select}}</select></td></tr>
@@ -87,7 +89,7 @@
 </div>
 </div>
 
-<div class="top-section", display="block", style="margin-top:0px;">
+<div class="top-section", display="block", style="margin-top:0px; padding:0px; width:auto">
   <div class="row">
 <div class="column4">
  <h2 class="blackbox", style="max-width: 150px"><span style="font-size: 9px; vertical-align: 4px;">&#9830;</span> <span>Dark Secrets</span></h2>
@@ -95,26 +97,6 @@
      {{#each darksecrets as |darksecret id|}}
      {{> "systems/kult4e/templates/partials/darksecret-card.hbs" darksecret}}
      {{/each}}
- </div>
-
- <h2 class="blackbox", style="max-width: 170px; margin-top:18px;"><span style="font-size: 9px; vertical-align: 4px;">&#9830;</span> <span>Disadvantages</span></h2>
- <div class="item-list disadvantage-list">
-     {{#each disadvantages as |disadvantage id|}}
-     {{> "systems/kult4e/templates/partials/disadvantage-card.hbs" disadvantage}}
-     {{/each}}
-
- </div>
- <h2 class="blackbox", style="max-width: 145px; margin-top:18px;"><span style="font-size: 9px; vertical-align: 4px;">&#9830;</span> <span>Advantages</span></h2>
- <div class="item-list advantage-list">
-     {{#each advantages as |advantage id|}}
-     {{> "systems/kult4e/templates/partials/advantage-card.hbs" advantage}}
-     {{/each}}
- </div>
- <h2 class="blackbox", style="max-width: 117px; margin-top:18px;"><span style="font-size: 9px; vertical-align: 4px;">&#9830;</span> <span>Weapon</span></h2>
- <div class=" item-list weapon-list">
- {{#each weapons as |weapon id|}}
- {{> "systems/kult4e/templates/partials/weapon-card.hbs" weapon}}
- {{/each}}
  </div>
 </div>
 
@@ -132,28 +114,80 @@
      <option value="8">Unhinged: -2 KIT/ -3 Disadvantage / +1 Illusion</option>
      <option value="9">Broken: GM Makes a Move</option>{{/select}}</select>
  <a class="stability-minus" title="Click to Take Stability Damage"><i class="fas fa-minus-circle"></i></a><a class="stability-plus" title="Click to Heal Stability"><i class="fas fa-plus-circle"></i></a>
- <h2 class="blackbox", style="max-width: 125px; margin-top:18px;"><span style="font-size: 9px; vertical-align: 4px;">&#9830;</span> <span>Relations</span></h2>
- <div class="item-list relationship-list">
-     {{#each relationships as |relationship id|}}
-     {{> "systems/kult4e/templates/partials/relationship-card.hbs" relationship}}
-     {{/each}}
+</div>
+</div>
+</div>
 
+<div class="top-section", display="block", style="margin-top:auto;">
+  <div class="row">
+<div class="column4">
+  <h2 class="blackbox", style="max-width: 170px; margin-top:18px;"><span style="font-size: 9px; vertical-align: 4px;">&#9830;</span> <span>Disadvantages</span></h2>
+  <div class="item-list disadvantage-list">
+      {{#each disadvantages as |disadvantage id|}}
+      {{> "systems/kult4e/templates/partials/disadvantage-card.hbs" disadvantage}}
+      {{/each}}
+
+  </div>
+</div>
+
+<div class="column4">
+  <h2 class="blackbox", style="max-width: 125px; margin-top:18px;"><span style="font-size: 9px; vertical-align: 4px;">&#9830;</span> <span>Relations</span></h2>
+  <div class="item-list relationship-list">
+      {{#each relationships as |relationship id|}}
+      {{> "systems/kult4e/templates/partials/relationship-card.hbs" relationship}}
+      {{/each}}
+
+  </div></div>
+</div>
+</div>
+
+
+<div class="top-section", display="block", style="margin-top:0px;">
+  <div class="row">
+<div class="column4">
+  <h2 class="blackbox", style="max-width: 145px; margin-top:18px;"><span style="font-size: 9px; vertical-align: 4px;">&#9830;</span> <span>Advantages</span></h2>
+  <div class="item-list advantage-list">
+      {{#each advantages as |advantage id|}}
+      {{> "systems/kult4e/templates/partials/advantage-card.hbs" advantage}}
+      {{/each}}
+  </div>
+</div>
+
+<div class="column4">
+  <h2 class="blackbox", style="max-width: 185px; margin-top:18px;"><span style="font-size: 9px; vertical-align: 4px;">&#9830;</span> <span>Dramatic Hooks</span></h2>
+  <div class="item-list relationship-list">
+      {{#each dramahook as |dramahook id|}}
+      {{> "systems/kult4e/templates/partials/dramahook-card.hbs" dramahook}}
+      {{/each}}
+
+  </div>
+</div>
+</div>
+</div>
+
+
+
+<div class="top-section", display="block", style="margin-top:0px;">
+  <div class="row">
+<div class="column4">
+  <h2 class="blackbox", style="max-width: 123px; margin-top:18px;"><span style="font-size: 9px; vertical-align: 4px;">&#9830;</span> <span>Weapons</span></h2>
+  <div class=" item-list weapon-list">
+  {{#each weapons as |weapon id|}}
+  {{> "systems/kult4e/templates/partials/weapon-card.hbs" weapon}}
+  {{/each}}
+  </div>
+</div>
+
+<div class="column4">
+  <h2 class="blackbox", style="max-width: 90px; margin-top:18px;"><span style="font-size: 9px; vertical-align: 4px;">&#9830;</span> <span>Gears</span></h2>
+  <div class=" item-list weapon-list">
+  {{#each gear as |gear id|}}
+  {{> "systems/kult4e/templates/partials/gear-card.hbs" gear}}
+  {{/each}}
  </div>
- <h2 class="blackbox", style="max-width: 185px; margin-top:18px;"><span style="font-size: 9px; vertical-align: 4px;">&#9830;</span> <span>Dramatic Hooks</span></h2>
- <div class="item-list relationship-list">
-     {{#each dramahook as |dramahook id|}}
-     {{> "systems/kult4e/templates/partials/dramahook-card.hbs" dramahook}}
-     {{/each}}
+</div>
+</div>
+</div>
 
- </div>
-
- <h2 class="blackbox", style="max-width: 85px; margin-top:18px;"><span style="font-size: 9px; vertical-align: 4px;">&#9830;</span> <span>Gear</span></h2>
- <div class=" item-list weapon-list">
- {{#each gear as |gear id|}}
- {{> "systems/kult4e/templates/partials/gear-card.hbs" gear}}
- {{/each}}
-</div>
-</div>
-</div>
 </div>
 </form>
