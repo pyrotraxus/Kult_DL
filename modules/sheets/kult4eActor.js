@@ -94,13 +94,14 @@ export default class kult4eActor extends Actor {
     if (specialflag == 5 && this.data.data.attributes.criticalwound && this.data.data.attributes.criticalwoundstabilized != "true")
       { situation -= 1;}
 
-    let r = new Roll (`2d10 + ${mod} + ${situation} - ${harm}`)
-    r.roll()
+    let r = new Roll (`2d10 + ${mod} + ${situation} - ${harm}`).roll();
+
+    if (game.dice3d) {let r = new Roll (`2d10 + ${mod} + ${situation} - ${harm}`).roll();
+    game.dice3d.showForRoll(r).then(displayed => {
     if(r.total){
       console.log("Roll Successful")
       const updated = this.update({"data.sitmod": 0});
       console.log(`Sitmod is ` + this.data.data.sitmod);
-
     }
     if (r.total >= 15)
     {ChatMessage.create({ content: "<div class='move-name'>" + movename + "</div> <div class = 'move-name'> Success! </div> <div class = 'move-result'>" + successtext + "</div> <div class = 'result-roll'> <div class='tooltip'>"  + r.total + "<span class='tooltiptext'> " + r.result + "</span></div></div>", speaker: ChatMessage.getSpeaker({alias: this.name})});
@@ -110,7 +111,22 @@ export default class kult4eActor extends Actor {
     }
     else
     {ChatMessage.create({ content: "<div class='move-name'>" + movename + "</div> <div class = 'move-name'> Partial Success! </div> <div class = 'move-result'>" + partialsuccess + "</div> <div class = 'result-roll'> <div class='tooltip'>"  + r.total + "<span class='tooltiptext'> " + r.result + "</span></div></div>", speaker: ChatMessage.getSpeaker({alias: this.name})});
-    }}
+    }});}
+  else {if(r.total){
+    console.log("Roll Successful")
+    const updated = this.update({"data.sitmod": 0});
+    console.log(`Sitmod is ` + this.data.data.sitmod);
+  }
+  if (r.total >= 15)
+  {ChatMessage.create({ content: "<div class='move-name'>" + movename + "</div> <div class = 'move-name'> Success! </div> <div class = 'move-result'>" + successtext + "</div> <div class = 'result-roll'> <div class='tooltip'>"  + r.total + "<span class='tooltiptext'> " + r.result + "</span></div></div>", speaker: ChatMessage.getSpeaker({alias: this.name})});
+  }
+  else if (r.total < 10)
+  {ChatMessage.create({ content: "<div class='move-name'>" + movename + "</div> <div class = 'move-name'> Failure! </div> <div class = 'move-result'>" + failuretext + "</div> <div class = 'result-roll'> <div class='tooltip'>"  + r.total + "<span class='tooltiptext'> " + r.result + "</span></div></div>", speaker: ChatMessage.getSpeaker({alias: this.name})});
+  }
+  else
+  {ChatMessage.create({ content: "<div class='move-name'>" + movename + "</div> <div class = 'move-name'> Partial Success! </div> <div class = 'move-result'>" + partialsuccess + "</div> <div class = 'result-roll'> <div class='tooltip'>"  + r.total + "<span class='tooltiptext'> " + r.result + "</span></div></div>", speaker: ChatMessage.getSpeaker({alias: this.name})});
+}}
+  }
 
 
   }
