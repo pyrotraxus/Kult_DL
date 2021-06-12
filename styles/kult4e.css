@@ -440,27 +440,27 @@ div.right-middle-column{
   float: left;
   width: 25%;
   padding: 10px;
-  max-height: 420px; /* Should be removed. Only for demonstration */
+  max-height: auto; /* Should be removed. Only for demonstration */
 }
 .column2 {
   float: left;
   width: 45%;
   padding: 10px;
-  max-height: 420px; /* Should be removed. Only for demonstration */
+  max-height: auto; /* Should be removed. Only for demonstration */
 }
 
 .column3 {
   float: left;
   width: 30%;
   padding: 10px;
-  max-height: 420px; /* Should be removed. Only for demonstration */
+  max-height: auto; /* Should be removed. Only for demonstration */
 }
 
 .column4 {
   float: left;
   width: 50%;
   padding: 10px;
-  height: 300px; /* Should be removed. Only for demonstration */
+  max-height: auto; /* Should be removed. Only for demonstration */
 }
 
 input.novo::-webkit-input-placeholder,
@@ -479,40 +479,3 @@ input.novo:-ms-input-placeholder,
 textarea.personal:-ms-input-placeholder {
   color: #d7d7d5;
 }
-
-/* select{
-    background: #fff;
-    color:#1e1e1c;
-}
-
-select option {
-  background: #fff;
-  color:#1e1e1c;
-} */
-/*  a:hover,
-  .tabs .item.active,
-  .dnd5e.chat-card .card-header h3:hover,
-  .filepicker .directory > li:hover {
-  	color: #220A29;
-  	text-shadow: 0 0 8px #fff;
-  }*/
-
-    /*a:hover,
-    .tabs .item.active,
-    .dnd5e.chat-card .card-header {
-    	color: red;
-      text-shadow: 0 0 0px #1e1e1c;
-    } esse ta bom*/
-
-    /*#chat-log .message  {
-      background-color: #999111;
-      border: 3px solid #111999;
-    }*/
-
-    /*.sidebar-tab .directory-list .directory-item h3,
-    .sidebar-tab .directory-list .directory-item h4,
-    li.folder.collapsed > .folder-header h3,
-    .window-app.sidebar-popout .sidebar-tab .directory-list .directory-item h4 {
-      color: red;
-      text-shadow: 0 0 0px #1e1e1c;
-    }*/
